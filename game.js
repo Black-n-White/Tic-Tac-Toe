@@ -1,4 +1,4 @@
-import doAIMove from "./AI";
+import doAIMove from "./AI.js";
 
 export default function doGameProcess ( field, difficulty )
 {

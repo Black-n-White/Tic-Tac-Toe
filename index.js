@@ -1,2 +1,2 @@
-import doGameProcess from "./game";
+import doGameProcess from "./game.js";
 doGameProcess( "field", "difficulty" )
