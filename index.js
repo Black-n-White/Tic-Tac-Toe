@@ -10,4 +10,4 @@ let boardMatrix = [
     0, 0, 0,
 ];
 
-startGameButton.addEventListener( 'click', startGame( difficultySelect.value, boardDiv, boardMatrix ) );
+startGameButton.addEventListener( 'click', startGame( boardDiv, boardMatrix, difficultySelect.value ) );
