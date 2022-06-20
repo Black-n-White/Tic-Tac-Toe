@@ -1,1 +1,262 @@
+h1
+{
+    margin: 0;
+}
 
+p
+{
+    margin: 0
+}
+
+html
+{
+    padding: 0;
+}
+
+b
+{
+    font-weight: 900;
+}
+
+img
+{
+    transition: 500ms;
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.container
+{
+    height: 100vh;
+    font-family: monospace;
+}
+
+.wrapper
+{
+    display: none;
+}
+
+.active-wrapper
+{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.page-heading
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn
+{
+    font-family: monospace;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.difficulty-select
+{
+    border: 1px solid black;
+    font-family: monospace;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 300ms;
+    outline: none;
+}
+
+.btn:hover
+{
+    background-color: lightgrey;
+}
+
+.difficulty-select:hover
+{
+    background-color: lightgrey;
+    outline: none;
+}
+
+.difficulty-select:active
+{
+    outline: none;
+}
+
+.board
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cell
+{
+    border: 3px solid black;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.player-cell
+{
+    cursor: not-allowed;
+}
+
+.AI-cell
+{
+    cursor: not-allowed;
+}
+
+.active-cell
+{
+    cursor: not-allowed;
+}
+
+.modal-container
+{
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 70%);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.modal
+{
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    left: 10%;
+    right: 10%;
+    top: 15%;
+    bottom: 15%;
+    min-width: calc(240px + 5%);
+    background-color: #fff;
+    border-radius: 20px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.modal-open
+{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: monospace;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(202, 202, 202);
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.modal-open:hover
+{
+    background-color: gray;
+}
+
+.modal-headings
+{
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    opacity: 1;
+}
+
+.modal-text
+{
+    display: none;
+    margin-top: 2%;
+    margin-inline: 10%;
+}
+
+.modal-heading-active
+{
+    border-bottom: 5px solid black;
+    background-color: lightgrey;
+}
+
+.modal-heading
+{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    width: 20%;
+    height: calc(100% - 4px);
+    transition: 300ms;
+}
+
+.modal-text-active
+{
+    display: block;
+}
+
+@media(max-width: 400px)
+{
+    .modal-headings
+    {
+        flex-direction: column;
+    }
+
+    .modal
+    {
+        left: 5%;
+        right: 5%;
+        top: 10%;
+        bottom: 10%;
+    }
+}
+
+@media(max-width: 700px)
+{
+    .suggestion
+    {
+        margin-inline: 10%;
+    }
+
+    .consequence-heading
+    {
+        margin-inline: 10%;
+    }
+}
+
+@media(max-height: 600px)
+{
+    .modal
+    {
+        left: 5%;
+        right: 5%;
+        top: 5%;
+        bottom: 5%;
+    }
+
+    .modal-headings
+    {
+        flex-direction: row;
+    }
+}

@@ -1,4 +1,11 @@
-export default function createBoard ( board, boardMatrix )
+export default function createBoard ()
 {
-    // create the playing board
-}
+    const boardDiv = document.getElementById( 'board' );
+    for ( let i = 0; i < 9; i++ )
+    {
+        const cell = document.createElement( 'div' );
+        boardDiv.append( cell );
+        cell.classList.add( 'cell' );
+        cell.id = i;
+    };
+};

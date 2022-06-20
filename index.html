@@ -6,23 +6,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<style src="./style.css"></style>
 
 <body>
-    <div class="wrapper">
-        <h1 class="header">Tic Tac toe</h1>
-        <div class="start-game-wrapper" id="difficulty-wrapper">
+    <div class="container">
+        <h1 class="page-heading">Tic Tac Toe</h1>
+        <div class="start-game-wrapper wrapper active-wrapper" id="start-game-wrapper">
             <select name="difficulty-select" id="difficulty-select" class="difficulty-select">
                 <option value="Easy">Easy</option>
                 <option value="Medium">Medium</option>
                 <option value="Hard">Hard</option>
             </select>
-            <button class="start-game-btn" id="start-game-btn">Start Game</button>
+            <button class="start-game-btn btn" id="start-game-btn">Start Game</button>
         </div>
-        <div class="game-wrapper" id="game-wrapper">
-            <div class="move-indicator" id="move-indicator"></div>
+        <div class="game-wrapper wrapper" id="game-wrapper">
+            <div class="move-indicator" id="move-indicator">Your move!</div>
             <div class="board" id="board"></div>
+        </div>
+        <div class="win-wrapper wrapper" id="win-wrapper">
+            <h1 class="consequence-heading">You won!</h1>
+            <p class="suggestion" id="suggestion-win"></p>
+            <button class="btn play-again">Play Again</button>
+        </div>
+        <div class="lose-wrapper wrapper" id="lose-wrapper">
+            <h1 class="consequence-heading">You lost!</h1>
+            <p class="suggestion" id="suggestion-lose"></p>
+            <button class="play-again btn">Play Again</button>
+        </div>
+        <div class="draw-wrapper wrapper" id="draw-wrapper">
+            <h1 class="consequence-heading">The game ended in a draw!</h1>
+            <p class="suggestion" id="suggestion-draw"></p>
+            <button class="play-again btn">Play Again</button>
+        </div>
+        <button class="modal-open" id="modal-open-btn">?</button>
+        <div class="modal-container modal-active" id="modal-container">
+            <div class="modal">
+                <div class="modal-headings">
+                    <div class="modal-heading modal-heading-active" id="modal-heading-1">
+                        <h1 class="modal-heading-text">ABOUT</h1>
+                    </div>
+                    <div class="modal-heading" id="modal-heading-2">
+                        <h1 class="modal-heading-text">TUTORIAL</h1>
+                    </div>
+                </div>
+                <p class="modal-text modal-text-active" id="modal-text-1">This project's goal is to create a playable
+                    version of browser
+                    tic-tac-toe.
+                    There are 3 difficulties: Easy, Medium and
+                    Hard. The AI will make its moves acoording to the algorythm of the difficulty you select.
+
+                    The project is now finished. I will keep improving the hard difficulty AI so that it's even more
+                    difficult to win. I
+                    will also keep searching for bugs and fix them.
+
+                    If you find a bug, I'd appreciate it if you sent me a description of the bug and screenshots to this
+                    email:
+                    vadim.shvydun@gmail.com</p>
+                <p class="modal-text" id="modal-text-2">
+                    The first thing you can see on the page is a selector of difficulties. You can choose between three
+                    - Easy, Medium, and Hard. I'd recommend starting with Easy and climbing your way up to Hard.
+                    Disclaimer: it's about 10x harder to win on Medium difficulty than on Easy, and almost impossible to
+                    win on Hard. Not fully impossible though, you just need a bit of testing and some luck. The game is
+                    played exactly as traditional tic-tac-toe is. To make a move, just click on a cell. You have the
+                    first move. Choose a free cell and wait for the AI to do its move. Get three of your symbols in a
+                    row or diagonal to win. The game will end automatically once you or the AI win, or there are no
+                    free cells left. I challenge <i><b>you</b></i> to win against Hard difficulty!
+                </p>
+            </div>
         </div>
     </div>
     <script src="./index.js" type="module"></script>
