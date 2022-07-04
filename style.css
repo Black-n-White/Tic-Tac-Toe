@@ -398,3 +398,8 @@ body
         flex-direction: row;
     }
 }
+
+.suggestion
+{
+    text-align: center;
+}
